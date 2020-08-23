@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desarrollo web</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/estilos.css">
+    <style>
+        .abuelo-registro {
+            background: #5872A6;
+            color: #F2F2F2;
+            padding: 32px 15px;
+
+            /* Todo esto crea una tabla y centra a sus hijos */
+            display: grid;
+            grid-template-columns: minmax(auto, 1024px);
+            /* height: 250px; */
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .padre-registro {
+          /* Todo esto lo divide y le margenes  */
+            display: grid;
+            grid-template-columns: 40px 1fr 320px;
+            grid-template-areas: "logo titulo form" ". descripcion form" ". lanzamiento form";
+            grid-gap: 10px;
+        }
+
+        .abuelo-registro figure {
+            margin: 0;
+        }
+        .abuelo-registro h1 {
+            font-size: 36px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        form {
+            text-align: center;
+            background: rgb(255, 255, 255);
+            color: #A64949;
+            padding: 1.5em;
+            border-radius: 10px;
+             box-shadow: 5px 10px 18px black;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #A64949;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        form button {
+            background: #2D7366;
+            color: #F2F2F2;
+            border: none;
+            height: 35px;
+            border-radius: 10px;
+            border: 1px solid #A64949;
+            display: inline-block;
+        }
+
+
+        .lanzamiento p {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 300;
+        }
+        .logo {
+            grid-area: logo;
+        }
+
+        .titulo {
+            grid-area: titulo;
+        }
+
+        .form {
+            grid-area: form;
+        }
+
+        .lanzamiento {
+            grid-area: lanzamiento;
+        }
+
+        .descripcion {
+            grid-area: descripcion;
+        }
+        @media screen and (max-width: 767px) {
+          .padre-registro {
+            /* Todo esto lo divide y le margenes  */
+            /* height: 50vh; */
+              display: grid;
+              grid-template-columns: 70px 1fr;
+              grid-template-areas: "logo titulo"
+              "descripcion descripcion"
+              "form form"
+              "lanzamiento lanzamiento";
+              /* grid-gap: 10px; */
+          }
+         }
+    </style>
+</head>
+
+<body>
+    <div class="padre-portada">
+        <h1>"El conocimiento es poder"</h1>
+        <button type="button" value="hola">Menu</button>
+    </div>
+
+
+    <section class="abuelo-cursos">
+        <div class="descripcion-cursos">
+            <h1>MI primer sitio web adaptable</h1>
+        </div>
+        <figure class="padre-cursos html">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Hola mundo</h1>
+            </div>
+        </figure>
+        <figure class="padre-cursos html1">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Curso de Html</h1>
+            </div>
+        </figure>
+        <figure class="padre-cursos html2">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Curso de Html</h1>
+            </div>
+        </figure>
+        <figure class="padre-cursos html3">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Curso de Html</h1>
+            </div>
+        </figure>
+        <figure class="padre-cursos html4">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Curso de Html</h1>
+            </div>
+        </figure>
+        <figure class="padre-cursos html5">
+            <img src="img/menu.png" alt="" height="35px">
+            <div class="mama-cursos">
+                <h1>Curso de Html</h1>
+            </div>
+        </figure>
+    </section>
+
+    <section class="abuelo-aprenderas">
+        <div>
+            <h1>Hola mundo Desarrolladores</h1>
+        </div>
+        <div class="descripcion-aprenderas">
+            <p>Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El</p>
+            <figure>
+                <img src="img/var.png" alt="" height="420px">
+            </figure>
+        </div>
+    </section>
+
+    <section class="boton">
+        <div>
+            <button class="button" type="button" value="hola">Empieza ahora</button>
+        </div>
+    </section>
+
+
+
+    <section class="abuelo-developer">
+        <div class="cabecera-developer">
+            <h1>Desarrolladores del sitio</h1>
+        </div>
+        <div class="padre-developer">
+            <p class="frase">Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El</p>
+            <figure>
+                <img src="img/coco.jpg" alt="" height="55px">
+                <div class="hijo-developer">
+                    <h4>Luis</h4>
+                    <a href="https://twitter.com/@Luis_php">
+                        <p>@Luis_php</p>
+                    </a>
+                </div>
+
+            </figure>
+        </div>
+        <div class="mama-developer">
+            <p class="frase">Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El</p>
+            <figure>
+                <img src="img/avatar.jpg" alt="" height="55px">
+                <div class="hijo-developer">
+                    <h4>Hola mundo</h4>
+                    <p>@Hola_mundo</p>
+                </div>
+            </figure>
+        </div>
+        <div class="pie-cabecera-developer">
+            <h1>Desarrolladores del sitio</h1>
+        </div>
+    </section>
+
+
+
+
+    <section class="padre-comentarios">
+        <div class="hijo" id="caja">
+            <h1>Desarrolladores del sitio</h1>
+        </div>
+
+        <div class="hijo" id="caja1">
+            <p class="frase">Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El</p>
+        </div>
+
+        <figure class="hijo" id="caja2">
+            <img src="img/coco.jpg" alt="" height="55px">
+            <div class="nieto">
+                <p>Luis</p>
+                <a href="https://twitter.com/@Luis_php">
+                    <p>@Luis_php</p>
+                </a>
+            </div>
+        </figure>
+
+        <div class="hijo" id="caja3">
+            <p class="frase">Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El</p>
+        </div>
+
+        <figure class="hijo" id="caja4">
+            <img src="img/avatar.jpg" alt="" height="55px">
+            <div class="nieto">
+                <p>Hola mundo</p>
+                <p>@Hola_mundo</p>
+            </div>
+        </figure>
+        <div class="hijo" id="caja5">
+            <h1>Desarrolladores del sitio</h1>
+        </div>
+    </section>
+
+
+
+
+    <section class="abuelo-registro">
+        <div class="padre-registro">
+            <figure class="logo">
+                <img src="img/menu.png" alt="" height="50px">
+            </figure>
+            <h1>Bienvenido</h1>
+            <div class="descripcion">
+                <p>Se cree ampliamente que la historia de Lorem I psum se origina con Cicerón en el siglo I aC y su texto De Fini omo En los extremos del bien y del mal, se dividió en cinco libros. El
+                </p>
+            </div>
+            <form action="" class="form">
+                <p>Resiviras cada semana informacion</p>
+                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Apellido">
+                <button>Comienza ahora</button>
+            </form>
+            <div class="lanzamiento">
+                <p>Lanzamiento:</p>
+                <p>
+                    <span>12: Sm</span>
+                    <span>12: Am</span>
+                    <span>45: Jl</span>
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
